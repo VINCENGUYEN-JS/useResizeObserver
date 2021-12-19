@@ -4,14 +4,14 @@ type ResizeFnc = (r: ResizeObserverEntry) => void;
 
 let observer: ResizeObserver;
 
-const callBackMap = new Map<Element, ResizeFnc[]>();
+const callBackMap = new Map<Element, React.MutableRefObject<ResizeFnc>[]>();
 
 function init() {
   observer = new ResizeObserver((entries) => {
     entries.forEach((entry) => {
       const callbacks = callBackMap.get(entry.target);
       if (callbacks) {
-        callbacks.forEach((cb) => cb(entry));
+        callbacks.forEach((cb) => cb.current(entry));
       }
     });
   });

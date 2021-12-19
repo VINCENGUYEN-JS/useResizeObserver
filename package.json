@@ -1,15 +1,28 @@
 {
   "name": "vince-nguyen-use-resize-observer",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "description": "Easy to use resize observer hook",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "license": "MIT",
+  "keywords": [
+    "detect when element resizes",
+    "react",
+    "custom hook"
+  ],
+  "author": "Vince Nguyen",
+  "scripts": {
+    "build": "node esbuild.js && yarn tsc"
+  },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/react": "^17.0.37",
     "esbuild": "^0.14.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "typescript": "^4.5.4"
   }
 }
