@@ -13,18 +13,23 @@
   "author": "Vince Nguyen",
   "scripts": {
     "build": "node esbuild.js && yarn tsc",
-    "test": "jest"
+    "test": "jest",
+    "clear": "jest --clearCache"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "5.1.0",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.37",
+    "babel-jest": "^27.4.5",
     "esbuild": "^0.14.5",
     "jest": "^26.6.3",
     "react": "^17.0.2",
